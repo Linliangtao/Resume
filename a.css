@@ -14,13 +14,21 @@ body{
   }
  
 .topNavBar {
-  padding: 20px 16px 20px 16px;
+  padding: 20px 0 20px 0;
+  position: fixed;
+  top: 0;
+  left:0;
+  width:100%;
+  }
+  .topNavBar-inner{
+  padding: 0 16px;
   }
   /*Logo*/
   .topNavBar .logo {
     font-family:Arial, Helvetica, sans-serif;
     font-size: 24px;
     padding-top: 8px;
+    float: left;
   }
   .topNavBar .logo .rs{
     color:#e6686a;
@@ -33,6 +41,7 @@ body{
   /*右导航条*/
   .topNavBar nav {
     padding-top: 7px;
+    float: right;
   }
   .topNavBar nav ul{
     list-style: none;
@@ -56,4 +65,8 @@ body{
   }
   .topNavBar nav ul>li>a:hover{
     border-bottom-color: #DC6465;
+  }
+  .banner{
+   background-image:url(./img/img2.jpg);
+   height: 515px;
   }
