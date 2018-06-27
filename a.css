@@ -223,12 +223,14 @@ section.skills h3 {
   font-size: 14px;
   line-height: 1.1;
   padding-right: 40px;
+ 
 }
 section.skills > ol {
   background: white;
   box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.5);
   padding: 42px 50px 10px;
   margin-top: 30px;
+  list-style: none;
 }
 section.skills > ol > li {
   float: left;
@@ -321,7 +323,7 @@ section.portfolio .works > .small {
 		padding-top: 40px;
 		padding-bottom: 40px;
     color: rgba(255, 255, 255, 0.4);
-   
+   text-align: center;
   }
   
  
