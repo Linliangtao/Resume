@@ -271,7 +271,8 @@ section.portfolio > nav > ol > li{
   float: left;
   margin-left: 40px;
   cursor: pointer;
-
+  color: #3d4451;
+  font-weight: bold;
 }
 section.portfolio > nav > ol > li:first-child{
   margin-left: 0;
