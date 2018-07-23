@@ -80,10 +80,28 @@ body{
     padding-top:4px;
     padding-bottom:6px;
     display:block;
+    position: relative;
   }
-  .topNavBar nav ul>li>a:hover{
-    border-bottom-color: #DC6465;
+  .topNavBar nav ul>li>a:hover::after{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #e06567;
+    height: 3px;
+    animation: menuSlide 0.4s;    
   }
+  @keyframes menuSlide {
+      0%{
+        width: 0;
+      } 
+      100%{
+        width: 100%;
+      }   
+  }
+
   .banner{
    background-image:url(./img/img1.jpg);
    height: 515px;
