@@ -2,11 +2,16 @@
 <html>
   <head>
     <title>林良涛的个人简历</title>
-    <link rel="stylesheet" href="./a.css">
+    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="./loading.css">
     <link rel="JavaScript" href="./a.js">
     <script src="//at.alicdn.com/t/font_716332_tycuthepid.js"></script>
   </head>
   <body>
+    <div id="siteWelcome" class="site-Welcome active">
+        <div class="loading"></div>
+    </div>
+    
     <div class="topNavBar">
       <div class="topNavBar-inner clearfix">
       <a class="logo" href="#" alt="logo">
@@ -188,7 +193,10 @@
           <a href="*" target="_blank">林良涛</a>
       </p>
 	</div>
-	</footer>
+  </footer>
+  <script>
+    siteWelcome.classList.remove('active')
+  </script>
   </body>
   
   </html>
