@@ -11,8 +11,7 @@
     <div id="siteWelcome" class="site-Welcome active">
         <div class="loading"></div>
     </div>
-    
-    <div class="topNavBar">
+    <div id="topNavBar" class="topNavBar">
       <div class="topNavBar-inner clearfix">
       <a class="logo" href="#" alt="logo">
         <span class="rs">RS</span><span class="card">card</span>
@@ -198,6 +197,13 @@
   setTimeout(function(){
     siteWelcome.classList.remove('active')
   },1000)
+
+  window.onscroll = function(xxxxx){
+   if(window.scrollY > 0){
+    topNavBar.classList.add('sticky')
+   }else
+    topNavBar.classList.remove('sticky')
+  }
   </script>
   </body>
   
