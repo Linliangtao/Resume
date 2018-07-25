@@ -3,14 +3,11 @@
   <head>
     <title>林良涛的个人简历</title>
     <link rel="stylesheet" href="./main.css">
-    <link rel="stylesheet" href="./loading.css">
     <link rel="JavaScript" href="./a.js">
     <script src="//at.alicdn.com/t/font_716332_tycuthepid.js"></script>
   </head>
   <body>
-    <div id="siteWelcome" class="site-Welcome active">
-        <div class="loading"></div>
-    </div>
+    
     <div id="topNavBar" class="topNavBar">
       <div class="topNavBar-inner clearfix">
       <a class="logo" href="#" alt="logo">
@@ -208,36 +205,41 @@
   </footer>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.2.0/Tween.min.js"></script>
   <script>  
-  setTimeout(function(){
-    siteWelcome.classList.remove('active')
-  },1000)
+  // 添加 offset 类
+let specialTags = document.querySelectorAll('[data-x]')
+for(let i =0;i<specialTags.length; i++){
+  specialTags[i].classList.add('offset')
+}
+setTimeout(function(){
+  findClosest()
+},200)
 
-  window.onscroll = function(xxxxx){
-   if(window.scrollY > 0){
+window.onscroll = function(x){
+  if(window.scrollY > 0){
     topNavBar.classList.add('sticky')
-   }else{
+  }else{
     topNavBar.classList.remove('sticky')
   }
-  //高亮
+  findClosest()
+}
+function findClosest(){
   let specialTags = document.querySelectorAll('[data-x]')
   let minIndex = 0
-  for(let i=1;i<specialTags.length;i++){
-    if(Math.abs(specialTags[i].offsetTop - window.scrollY) < Math.abs(specialTags[minIndex].offsetTop - window.scrollY)){    
-    minIndex = i
+  for(let i =1;i<specialTags.length; i++){
+    if(Math.abs(specialTags[i].offsetTop - window.scrollY) < Math.abs(specialTags[minIndex].offsetTop - window.scrollY)){
+      minIndex = i
     }
   }
-  for(let i=0;i<specialTags.length; i++){
-    specialTags[i].classList.remove('active')
-  }
-  specialTags[minIndex].classList.add('active')
+  
+  specialTags[minIndex].classList.remove('offset')
   let id = specialTags[minIndex].id
   let a = document.querySelector('a[href="#'+ id + '"]')
   let li = a.parentNode
   let brothersAndMe = li.parentNode.children
   for(let i=0; i<brothersAndMe.length;i++){
-    brothersAndMe[i].classList.remove('active')
+    brothersAndMe[i].classList.remove('highlight')
   }
-  li.classList.add('active')
+  li.classList.add('highlight')
 }
   //
   let liTags = document.querySelectorAll('nav.menu > ul > li')

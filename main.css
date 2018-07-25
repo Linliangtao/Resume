@@ -21,7 +21,26 @@ body{
     display: block;
     clear: both;
   }
- 
+  [data-x].active{
+    outline: 10px solid red;
+  }
+  [data-x].offset{
+    transform: translateY(100px);
+  }
+  [data-x]{
+    transform: translateY(0);
+    transition: all 0.5s;
+  }
+  @keyframes slideUp{
+    0%{
+      transform: translateY(-30px);
+    }
+    100%{
+      transform: translateY(0);
+    }
+  }
+
+
 .topNavBar {
   padding: 20px 0 20px 0;
   position: fixed;
@@ -84,7 +103,8 @@ body{
     display:block;
     position: relative;
   }
-  .topNavBar nav ul>li.active > a::after{
+  .topNavBar nav ul> li.active > a::after,
+  .topNavBar nav ul> li.highlight > a::after{
     content: '';
     display: block;
     position: absolute;
