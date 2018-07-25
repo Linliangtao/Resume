@@ -48,7 +48,7 @@
       </div>
     </div>
     <main>
-      <div id="siteAbout"class="usercard">
+      <div data-x id="siteAbout"class="usercard">
         <div class="pictureAndText clearfix">
           <div class="picture">
             <img src="./img/avatar.jpg" width=299px height=347px alt="头像">
@@ -106,7 +106,7 @@
       </p>
 
     </main>
-    <section id="siteSkills"class="skills">
+    <section data-x id="siteSkills"class="skills">
       <h2>技能</h2>
       <ol class="clearfix">
         <li>
@@ -159,7 +159,7 @@
         </li>
       </ol>
     </section>
-    <section id="siteWorks"class="portfolio">
+    <section data-x id="siteWorks"class="portfolio">
       <h2>作品集</h2>
       <nav>
         <ol class="clearfix">
@@ -215,10 +215,31 @@
   window.onscroll = function(xxxxx){
    if(window.scrollY > 0){
     topNavBar.classList.add('sticky')
-   }else
+   }else{
     topNavBar.classList.remove('sticky')
   }
-
+  //高亮
+  let specialTags = document.querySelectorAll('[data-x]')
+  let minIndex = 0
+  for(let i=1;i<specialTags.length;i++){
+    if(Math.abs(specialTags[i].offsetTop - window.scrollY) < Math.abs(specialTags[minIndex].offsetTop - window.scrollY)){    
+    minIndex = i
+    }
+  }
+  for(let i=0;i<specialTags.length; i++){
+    specialTags[i].classList.remove('active')
+  }
+  specialTags[minIndex].classList.add('active')
+  let id = specialTags[minIndex].id
+  let a = document.querySelector('a[href="#'+ id + '"]')
+  let li = a.parentNode
+  let brothersAndMe = li.parentNode.children
+  for(let i=0; i<brothersAndMe.length;i++){
+    brothersAndMe[i].classList.remove('active')
+  }
+  li.classList.add('active')
+}
+  //
   let liTags = document.querySelectorAll('nav.menu > ul > li')
   for(let i=0; i<liTags.length; i++){
     liTags[i].onmouseenter = function(x){
