@@ -336,18 +336,32 @@ section.skills.offset .progress{
 section.portfolio {
   text-align: center;
   margin-bottom: 100px;
+  max-width: 720px;
 }
 section.portfolio h2 {
   margin-bottom: 38px;
 }
 section.portfolio .swiper-container{
   width: 668px;
-  height: 401px;
+  height: 501px;
 }
 section.portfolio .swiper-slide{
   background: white;
 }
 
+section.portfolio .swiper-button-prev,section.portfolio .swiper-button-next{
+  background-color:white;
+  width:64px;
+  height:64px;
+  border-radius: 50%;
+  right:100%;
+  left:auto;
+  outline:none
+}
+section.portfolio .swiper-button-next{
+  right:auto;
+  left:100%;
+}
 
 
 
