@@ -47,33 +47,6 @@
       </div>
     </div>
     <main>
-        <style>
-        .swiper-container {
-            width: 600px;
-            height: 300px;
-        }  
-        .swiper-slide{
-          background: white;
-        }
-        </style>
-        <div class="swiper-container">
-            <!-- Additional required wrapper -->
-            <div class="swiper-wrapper">
-                <!-- Slides -->
-                <div class="swiper-slide">Slide 1</div>
-                <div class="swiper-slide">Slide 2</div>
-                <div class="swiper-slide">Slide 3</div>
-                ...
-            </div>
-            <!-- If we need pagination -->
-            <div class="swiper-pagination"></div>
-        
-            <!-- If we need navigation buttons -->
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
-        
-        </div>
-        
       <div data-x id="siteAbout"class="usercard">
         <div class="pictureAndText clearfix">
           <div class="picture">
@@ -187,39 +160,22 @@
     </section>
     <section data-x id="siteWorks"class="portfolio">
       <h2>作品集</h2>
-      <nav>
-        <ol class="clearfix">
-          <li id="portfolio1">所有</li>
-          <li id="portfolio2">框架</li>
-          <li id="portfolio3">原生JS&amp;CSS</li>
-        </ol>
-        <div id="portfolioBar" class="bar state-1">
-          <div class="bar-inner"></div>
-        </div>
-      </nav>
-      <script>
-        portfolio1.onclick= function(){
-          portfolioBar.className = 'bar state-1'
-        }
-        portfolio2.onclick= function(){
-          portfolioBar.className = 'bar state-2'
-        }
-        portfolio3.onclick= function(){
-          portfolioBar.className = 'bar state-3'
-        }
-      </script>
-  
-  
-      <div class="works" style="height: 597px;">
-        <div class="big" style="top: 0; left: 0;">
-          <img src="./img/1.jpg" alt="作品1">
-        </div>
-        <div class="small" style="top: 0; left: 645px;">
-          <img src="./img/2.jpg" alt="作品2">
-        </div>
-        <div class="small" style="top: 312px; left: 645px;">
-          <img src="./img/3.jpg" alt="作品3">
-        </div>
+      <div class="swiper-container">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+              <!-- Slides -->
+              <img src="./img/1.jpg"class="swiper-slide">
+              <img src="./img/2.jpg"class="swiper-slide">
+              <img src="./img/3.jpg"class="swiper-slide">
+              ...
+          </div>
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
+      
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+      
       </div>
   
     </section>
