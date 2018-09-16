@@ -5,6 +5,5 @@
     }else{
       topNavBar.classList.remove('sticky')
     }
-    findClosest()
   }
 }.call()
