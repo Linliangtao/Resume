@@ -1,4 +1,5 @@
-var mySwiper = new Swiper ('.swiper-container', {
+!function(){
+  var mySwiper = new Swiper ('.swiper-container', {
     // Optional parameters
     loop: true,
 
@@ -13,3 +14,4 @@ var mySwiper = new Swiper ('.swiper-container', {
       prevEl: '.swiper-button-prev',
     }
   })
+}.call()

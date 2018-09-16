@@ -1,17 +1,19 @@
+!function(){
   // 添加 offset 类
   let specialTags = document.querySelectorAll('[data-x]')
   for(let i =0;i<specialTags.length; i++){
     specialTags[i].classList.add('offset')
   }
-  setTimeout(function(){
-    findClosest()
-  },200)
+  findClosestAndRemoveOffset()
+  window.addEventListener('scroll', function(x){
+    findClosestAndRemoveOffset()
+  })
   
 
 
 
   /*helper*/ 
-  function findClosest(){
+  function findClosestAndRemoveOffset(){
     let specialTags = document.querySelectorAll('[data-x]')
     let minIndex = 0
     for(let i =1;i<specialTags.length; i++){
@@ -39,4 +41,6 @@
       liTags[i].onmouseleave = function(x){
         x.currentTarget.classList.remove('active')
       }
-    }
+    }}.call()
+
+  

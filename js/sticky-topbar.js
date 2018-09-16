@@ -1,4 +1,5 @@
-window.onscroll = function(x){
+!function(){
+  window.onscroll = function(x){
     if(window.scrollY > 0){
       topNavBar.classList.add('sticky')
     }else{
@@ -6,3 +7,4 @@ window.onscroll = function(x){
     }
     findClosest()
   }
+}.call()
