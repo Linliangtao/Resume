@@ -18,8 +18,8 @@ myForm.addEventListener('submit',function(e){
    message.save({
     'content':conctent
   }).then(function(object) {
-    alert('存入成功!');
-    console.log(Object);
+    alert('存入成功!')
+    console.log(Object)
   })
 })
 
