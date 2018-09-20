@@ -8,6 +8,22 @@ AV.init({
 });
 console.log("运行成功")
 
+
+var query = new AV.Query('Message');
+query.find()
+  .then(
+    function (messages) {
+      let array = messages.map((item) => item.attributes)
+      array.forEach ((item)=> {
+        let li = document.createElement('li')
+        li.innerText = item.content
+        let messageList = document.querySelector('#messageList')
+        messageList.appendChild(li)
+      })
+    }
+  )
+
+
 let myForm = document.querySelector('#postMessageForm')
 
 myForm.addEventListener('submit',function(e){
@@ -18,24 +34,10 @@ myForm.addEventListener('submit',function(e){
    message.save({
     'content':conctent
   }).then(function(object) {
-    alert('存入成功!')
+    window.location.reload()
     console.log(Object)
   })
 })
 
 
 
-/*
-//验证
-//创建TestObject 表
-var TestObject = AV.Object.extend('message');
-//在表中创建一行数据
-var testObject = new TestObject();
-//数据内容是 words: 'Hello World!'，之后保存
-//如果成功，打印出alert
-testObject.save({
-  words: 'Hello World!'
-}).then(function(object) {
-  alert('LeanCloud 成功！');
-})
-*/
