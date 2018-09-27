@@ -1,3 +1,5 @@
+//自动往上滚的动画
+
 !function(){
   // 添加 offset 类
   let specialTags = document.querySelectorAll('[data-x]')

@@ -1,3 +1,5 @@
+//点击滑动功能
+
 !function(){
   var view = document.querySelector('nav.menu')
   var controller = {

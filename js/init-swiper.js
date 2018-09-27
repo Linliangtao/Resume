@@ -1,3 +1,4 @@
+//初始化轮播
 !function(){
   var mySwiper = new Swiper ('.swiper-container', {
     // Optional parameters

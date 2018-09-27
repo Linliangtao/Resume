@@ -1,3 +1,5 @@
+//留言板功能
+
 !function(){
   var model = {
     // 获取数据
