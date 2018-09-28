@@ -1,7 +1,7 @@
 window.Controller = function(options){
     var init = options.init
     
-    return  {
+    let object = {
         view: null,
         model: null,
         init: function(view,model){
@@ -9,15 +9,14 @@ window.Controller = function(options){
             this.model = model
             this.model.init()
             init.call(this,view,model)
-            options.bindEvents.call(this)
+            this.bindEvents.call(this)
             
-        },
-        
-       
+        },       
     }
     for(let key in options){
-        object[key] = options[key]
-        
+        if(key !== 'init'){
+            object[key] = options[key]
+        }       
     }
     return object
 }

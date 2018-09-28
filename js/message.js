@@ -6,6 +6,8 @@
   var view = View('section.message')
 
   var contorller = Controller({
+    messageList: null,
+    form: null,
     init: function(view,controller){
       this.messageList = view.querySelector('#messageList')
       this.form = view.querySelector('form')
