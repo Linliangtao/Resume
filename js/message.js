@@ -5,7 +5,7 @@
 
   var view = View('section.message')
 
-  var contorller = Controller({
+  var controller = Controller({
     messageList: null,
     form: null,
     init: function(view,controller){
