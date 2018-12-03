@@ -141,7 +141,7 @@ body{
   }
 
   .banner{
-   background-image:url(./img/bgimg.jpg);
+   background-image:url(../img/bgimg.jpg);
    height: 515px;
    background-position: center center;
    background-size: cover;
