@@ -141,7 +141,7 @@ body{
   }
 
   .banner{
-   background-image:url(./img/img1.jpg);
+   background-image:url(./img/bgimg.jpg);
    height: 515px;
    background-position: center center;
    background-size: cover;
@@ -270,102 +270,129 @@ body > main .downloadResume:hover{
   font-weight: bold;
 }
 section.skills,
-section.portfolio{
-  max-width: 940px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 60px;
+section.portfolio {
+    max-width: 940px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 60px;
 }
-section.skills > h2 ,
+
+section.skills > h2,
 section.message > h2,
 section.portfolio > h2 {
-  margin-bottom:38px; 
-  text-align: center;
-  color: #3d4451;
-  font-size: 34px;
-  line-height: 1.2;
-  font-weight: 600;
+    text-align: center;
+    color: #3d4451;
+    font-size: 34px;
+    line-height: 1.2;
+    font-weight: 600;
 }
+
 section.skills h3 {
-  font-size: 14px;
-  line-height: 1.1;
-  padding-right: 40px;
- 
+    font-size: 14px;
+    line-height: 1.1;
+    padding-right: 40px;
 }
-section.message > ol{
-  max-width: 700px;
-  margin: 0 auto;
-  border-top:1px solid #DDD; 
-  list-style-type:none;
-}
-section.message > ol > li{
-  padding: 16px;
-  border-bottom: 1px solid #DDD;
-}
+
 section.skills > ol {
-  background: white;
-  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.5);
-  padding: 42px 50px 10px;
-  margin-top: 30px;
-  list-style: none;
+    background: white;
+    box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.5);
+    padding: 42px 50px 10px;
+    margin-top: 30px;
 }
+
 section.skills > ol > li {
-  float: left;
-  width: 48%;
-  box-sizing: border-box;
+    float: left;
+    width: 48%;
+    box-sizing: border-box;
 }
+
 section.skills > ol > li:nth-child(even) {
-  float: right;
+    float: right;
 }
 
 section.skills .progressBar {
-  height: 5px;
-  background: #FAE1E1;
-  border-radius: 2px;
-  margin: 4px 0 40px;
-  overflow: hidden;
+    height: 5px;
+    background: #FAE1E1;
+    border-radius: 2px;
+    margin: 4px 0 40px;
+    overflow: hidden;
 }
+
 section.skills .progressBar > .progress {
-  height: 100%;
-  background: #E6686A;
-  width: 70%;
-  border-radius: 2px;
-  transform: translateX(0); transition: all 1s;
+    height: 100%;
+    background: #E6686A;
+    width: 70%;
+    border-radius: 2px;
+    transform: translateX(0);
+    transition: all 1s;
 }
-section.skills.offset .progress{
-  transform:translateX(-100%);
+
+section.skills.offset .progress {
+    transform: translateX(-100%);
 }
 
 section.portfolio {
-  text-align: center;
-  margin-bottom: 100px;
-  max-width: 720px;
+    text-align: center;
+    margin-bottom: 100px;
+    max-width: 720px;
 }
+
 section.portfolio h2 {
-  margin-bottom: 38px;
+    margin-bottom: 32px;
 }
-section.portfolio .swiper-container{
-  width: 668px;
-  height: 501px;
+
+section.portfolio .mySlides{
+    width: 100%;
 }
+
+section.portfolio .swiper-container {
+    width: 95%;
+    padding-top: 0.5rem;
+}
+
 section.portfolio .swiper-slide{
-  background: white;
+    background-position: center;
+    background-size: 130% 120%;
+    width: 60%;
 }
 
-section.portfolio .swiper-button-prev,section.portfolio .swiper-button-next{
-  background-color:white;
-  width:64px;
-  height:64px;
-  border-radius: 50%;
-  right:100%;
-  left:auto;
-  outline:none
-}
-section.portfolio .swiper-button-next{
-  right:auto;
-  left:100%;
+section.portfolio .swiper-slide img{
+    display: block;
+    width: 100%;
 }
 
+
+section.portfolio .swiper-button-prev,
+section.portfolio .swiper-button-next {
+    background-color: #6D6E82;
+    opacity: 0.6;
+    height: 64px;
+    right: 100%;
+    left: auto;
+    border-radius: 20%;
+
+
+    top: 5rem;
+    width: 10%;
+    outline: none;
+
+}
+
+section.portfolio .swiper-button-next {
+    left: 100%;
+    right: auto;
+}
+
+section.message > ol {
+  max-width: 700px;
+  margin: 0 auto;
+  border-top: 1px solid #DDD;
+}
+
+section.message > ol > li {
+  padding: 16px;
+  border-bottom: 1px solid #DDD;
+}
 
 
 #footer{

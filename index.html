@@ -3,13 +3,11 @@
   <head>
     <title>林良涛的个人简历</title>   
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.1/css/swiper.min.css">
-    <link rel="JavaScript" href="./a.js">
-    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="./css/main.css">
     <script src="//at.alicdn.com/t/font_716332_tycuthepid.js"></script>
 
   </head>
-  <body>
-    
+  <body>   
     <div id="topNavBar" class="topNavBar">
       <div class="topNavBar-inner clearfix">
       <a class="logo" href="#" alt="logo">
@@ -19,25 +17,9 @@
         <ul class="clearfix">
           <li><a href="#siteAbout">关于</a></li>
           <li><a href="#siteSkills">技能</a> </li>
-          <li>
-            <a href="#siteWorks">作品</a>
-            <ul class="submenu">
-                <li>作品1</li>
-                <li>作品2</li>
-                <li>作品3</li>
-            </ul>
-          </li>
-          <li>
-            <a href="#">博客</a>
-              <ul class="submenu">
-                <li>博客1</li>
-                <li>博客2</li>
-                <li>博客3</li>
-              </ul>
-          </li>
-          <li><a href="#">日历</a></li>
-          <li><a href="#">联系方式</a></li>
-          <li><a href="#">其他</a></li>
+          <li><a href="#siteWorks">作品</a></li>
+          <li><a href="#message">留言板</a></li>
+          <li><a href="#footer">其他</a></li>
         </ul>
       </nav>
       </div>
@@ -65,7 +47,7 @@
                 <dt>所在城市</dt>
                 <dd>广州</dd>
                 <dt>邮箱</dt>
-                <dd>1428129601qq.com</dd>
+                <dd>xlin0129@163.com</dd>
                 <dt>手机</dt>
                 <dd>13129620129</dd>
               </dl>
@@ -100,8 +82,8 @@
       </p>
 
       <p class="seftIntroduction">
-        林良涛，前端工程师，毕业于广州城建职业学院，软件技术专业。<br/>
-        技能：前端开发，javascript，Node.js开发
+        林良涛，自学前端半年，毕业于广州城建职业学院，软件技术专业。<br/>
+        技能：前端开发， HTML 5 &amp; CSS 3 ，JavaScript
       </p>
 
     </main>
@@ -160,43 +142,52 @@
     </section>
     <section data-x id="siteWorks"class="portfolio">
       <h2>作品集</h2>
-      <div id="mySlides">
+      <div id="mySlides" class="mySlides">
         <div class="swiper-container">
-          <!-- Additional required wrapper -->
-          <div class="swiper-wrapper">
-              <!-- Slides -->
-              <img src="./img/1.jpg"class="swiper-slide">
-              <img src="./img/2.jpg"class="swiper-slide">
-              <img src="./img/3.jpg"class="swiper-slide">
-          </div>
-          <!-- If we need pagination -->
-          <div class="swiper-pagination"></div>
-      
-          <!-- If we need navigation buttons -->
-       </div>
-       
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
-      </div>
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                  <img src="./img/items/nav-page.jpg">
+                  <a href="https://linliangtao.github.io/Bookmarks/" target="_blank">导航页</a>
+                </div>
+                <div class="swiper-slide">
+                  <img src="./img/items/canvas.jpg">
+                  <a href="https://linliangtao.github.io/canvas-demo/index.html" target="_blank">canvas 画板</a>
+                </div>
+                <div class="swiper-slide">
+                  <img src="./img/items/apple-style-slides.jpg">
+                  <a href="https://linliangtao.github.io/Apple-style-rotation/" target="_blank">苹果轮播</a>
+                </div>
+
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- If we need navigation buttons -->
+        </div>
+        <div class="swiper-button-prev swiper-button-white"></div>
+        <div class="swiper-button-next swiper-button-white"></div>
+    </div>
       
 
     </section>
 
     <!--留言板-->
-    <section class="message">
+    <section data-x id="message"class="message">
       <h2>留言板</h2>
       <ol id="messageList">
-      </ol>
-      <form id="postMessageForm" style="width:700px; margin: 100px auto">
-        <label for="">姓名</label>  
-          <input type="text" name="name">
-        <label for="">内容</label> 
-          <input type="text" name="content">
-          <input type="submit" value="提交">
-      </form>
+        </ol>
+        <form id="postMessageForm" style="width: 700px; margin: 50px auto;">
+            <label for="">姓名</label>
+            <input type="text" name="name">
+            <label for="">内容</label>
+            <input type="text" name="content">
+            <input type="submit" value="提交">
+        </form>
     </section>
     <!-- 尾部 -->
-	<footer id="footer">		
+	<footer data-x id="footer">		
       <p>&copy; 2018 <a href="">my resume</a>
           <a href="#" target="_blank" >- 版权所有</a> 
           <a href="*" target="_blank">林良涛</a>
